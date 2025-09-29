@@ -1,4 +1,4 @@
-defmodule Membrane.SRTParserPipelineTest do
+defmodule Membrane.Subtitles.SRT.ParserTest do
   use ExUnit.Case, async: true
 
   import Membrane.ChildrenSpec
@@ -17,7 +17,7 @@ defmodule Membrane.SRTParserPipelineTest do
       child(:source, %Membrane.File.Source{
         location: input_path
       })
-      |> child(:parser, Membrane.Subtitles.SRT.SRTParser)
+      |> child(:parser, Membrane.Subtitles.SRT.Parser)
       |> child(:sink, %Membrane.File.Sink{location: output_path})
     ]
 
@@ -55,7 +55,7 @@ defmodule Membrane.SRTParserPipelineTest do
 
     spec = [
       child(:source, %Membrane.Testing.Source{output: buffers})
-      |> child(:parser, Membrane.Subtitles.SRT.SRTParser)
+      |> child(:parser, Membrane.Subtitles.SRT.Parser)
       |> child({:sink, :text}, %Sink{})
     ]
 

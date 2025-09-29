@@ -1,4 +1,4 @@
-defmodule Membrane.Subtitles.SRT.SRTParser do
+defmodule Membrane.Subtitles.SRT.Parser do
   use Membrane.Filter
 
   def_input_pad(:input,
