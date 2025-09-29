@@ -1,0 +1,41 @@
+1
+00:00:01,000 --> 00:00:03,000
+Hello, world!
+
+2
+00:00:04,000 --> 00:00:06,000
+This is a test subtitle.
+
+3
+00:00:07,000 --> 00:00:09,500
+Membrane makes multimedia fun!
+
+4
+00:00:10,000 --> 00:00:13,000
+Subtitles can have multiple lines.
+Like this one.
+
+5
+00:00:14,000 --> 00:00:16,000
+They also handle punctuation, numbers (123),
+and special characters: © ™ ✓
+
+6
+00:00:17,500 --> 00:00:20,000
+Timing matters.
+This subtitle lasts 2.5 seconds.
+
+7
+00:00:21,000 --> 00:00:24,000
+Sometimes there’s just one word:
+Wow!
+
+8
+00:00:25,000 --> 00:00:28,000
+Subtitles can span across scenes.
+They must sync with the video.
+
+9
+00:00:29,000 --> 00:00:32,000
+The end of this sample SRT file.
+Goodbye!
