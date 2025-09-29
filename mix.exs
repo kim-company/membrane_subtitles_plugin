@@ -24,8 +24,8 @@ defmodule Membrane.Subtitles.MixProject do
     [
       {:membrane_core, "~> 1.1"},
       {:membrane_text_format, "~> 1.0"},
-      {:membrane_file_plugin, "~> 0.17"},
       {:kim_subtitle, "~> 0.1"},
+      {:membrane_file_plugin, ">= 0.0.0", only: :test},
       {:mneme, ">= 0.0.0", only: :test},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
