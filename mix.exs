@@ -8,7 +8,26 @@ defmodule Membrane.Subtitles.MixProject do
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      source_url: "https://github.com/kim-company/membrane_subtitles_plugin",
+      name: "Membrane Subtitles Plugin",
+      description: description(),
+      package: package(),
       preferred_cli_env: ["mneme.test": :test, "mneme.watch": :test]
+    ]
+  end
+
+  def description do
+    """
+    Subtitles generation and parsing for the Membrane Framework
+    """
+  end
+
+  def package do
+    [
+      maintainers: ["KIM Keep In Mind"],
+      files: ~w(lib mix.exs README.md LICENSE),
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => "https://github.com/kim-company/membrane_subtitles_plugin"}
     ]
   end
 
