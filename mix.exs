@@ -4,7 +4,7 @@ defmodule Membrane.Subtitles.MixProject do
   def project do
     [
       app: :membrane_subtitles_plugin,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
