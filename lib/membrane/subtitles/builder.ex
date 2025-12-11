@@ -61,12 +61,18 @@ defmodule Membrane.Subtitles.Builder do
   end
 
   @impl true
+  def handle_end_of_stream(:input, _ctx, {nil, builder}) do
+    {_builder, _cue} = Builder.flush(builder)
+    {[end_of_stream: :output], {nil, builder}}
+  end
+
+  @impl true
   def handle_end_of_stream(:input, _ctx, {last_buffer, builder}) do
     {builder, cue} = Builder.flush(builder)
     {build_output_buffers(last_buffer, cue) ++ [end_of_stream: :output], {last_buffer, builder}}
   end
 
-  defp build_output_buffers(buffer, cues) do
+  defp build_output_buffers(%Buffer{} = buffer, cues) do
     cues
     |> List.wrap()
     |> Enum.map(fn cue ->

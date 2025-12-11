@@ -11,9 +11,12 @@ defmodule Membrane.Subtitles.MixProject do
       source_url: "https://github.com/kim-company/membrane_subtitles_plugin",
       name: "Membrane Subtitles Plugin",
       description: description(),
-      package: package(),
-      preferred_cli_env: ["mneme.test": :test, "mneme.watch": :test]
+      package: package()
     ]
+  end
+
+  def cli do
+    [preferred_envs: ["mneme.test": :test, "mneme.watch": :test]]
   end
 
   def description do
